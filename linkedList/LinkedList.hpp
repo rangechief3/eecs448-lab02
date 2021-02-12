@@ -74,7 +74,7 @@ std::vector<T> LinkedList<T>::toVector() const
 }
 
 template <typename T>
-void LinkedList<T>::addBack(T value)////////////////////////////////////////////
+void LinkedList<T>::addBack(T value)
 {
 	Node<T>* temp = nullptr;
 
@@ -112,9 +112,7 @@ bool LinkedList<T>::removeBack()
 	Node<T>* secondintoLast = nullptr;
 	bool isRemoved = false;
 
-	/** TODO 
-		Fix this method
-	*/
+
 	int size = this->size();
 	if (size == 0) {
 		return false;
@@ -122,7 +120,7 @@ bool LinkedList<T>::removeBack()
 	secondintoLast = m_front;
 	lastNode = secondintoLast->getNext();
 	
-	//printf("\n\n\n\n%d\n\n\n\n", size);
+
 	
 	for (int i = 1; i < size - 1; i++) {
 		lastNode = lastNode->getNext();
@@ -131,9 +129,9 @@ bool LinkedList<T>::removeBack()
 	secondintoLast->setNext(NULL);
 	delete lastNode;
 	m_size--;
-	//size = this->size();
+
 	return true;
-}	/////////////////////////////////////////////////////////////////////////////
+}	
 
 template <typename T>
 bool LinkedList<T>::removeFront()
